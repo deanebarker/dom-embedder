@@ -12,11 +12,11 @@ document.body.appendChild(element);
 
 Heuristic:
 
-If the HTML does not have a `SCRIPT` or `STYLE` tag, the resulting element will be `<embedded-content>` with the HTML as descendant element. ("low" isolation)
+If the HTML does not have a `SCRIPT` or `STYLE` tag, the resulting element will be `<embedded-content>` with the HTML as descendant element. (**low** isolation)
 
-If the HTML has a `STYLE` tag, the resulting element will also be `<embedded-content>` but with a shadow root to isolate the styles. ("low" isolation)
+If the HTML has a `STYLE` tag, the resulting element will also be `<embedded-content>` but with a shadow root to isolate the styles. (**medium** isolation)
 
-If the HTML has a `SCRIPT` tag, the resulting element will be an `IFRAME`, with the HTML written to the `SRCDOC` attribute, and code provided for auto-resizing on height changes. ("low" isolation)
+If the HTML has a `SCRIPT` tag, the resulting element will be an `IFRAME`, with the HTML written to the `SRCDOC` attribute, and code provided for auto-resizing on height changes. (**high** isolation)
 
 ### To Customize
 
